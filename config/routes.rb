@@ -1,4 +1,11 @@
 ProtoSynth::Application.routes.draw do
+  root :to => 'login#login'
+  #get "login/login"
+ # root :to => 'login'
+  match '/login',               to: 'login#login',            via: 'get'
+  get "first_pages/home"
+  #match '/home',             to: 'first_pages#home',            via: 'get'
+  get "first_pages/help"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
