@@ -3,17 +3,19 @@
 %br
 %center
   %h1 ProtoSynthesis Login Page
-  / %br
-  / = form_tag login_check_path do
+  %br
+  = form_tag login_check_path do
+    //= render 'shared/error_messages'
+    //%p id="notice"
+    =flash[:notice]
+    = label :login, :username, 'Username'
+    = text_field :login, :username
 
-  /   = label :login, :username, 'Username'
-  /   = text_field :login, :username
-
-  /   = label :login, :password, 'Password'
-  /   = password_field :login, :password
-  /   %br
-  /   = submit_tag 'Login', :class => "btn btn-info"
+    = label :login, :password, 'Password'
+    = password_field :login, :password
+    %br
+    = submit_tag 'Login', :class => "btn btn-info"
 
 
-  / %h4= link_to 'Make new account', new_path
+  %h4= link_to 'Make new account', new_path
 

@@ -12,6 +12,8 @@ gem 'bootstrap-will_paginate', '0.0.9'
 gem 'rake'
 gem 'haml'
 gem 'haml-rails'
+gem 'devise', '3.0.0.rc'
+gem 'protected_attributes'
 
 group :test, :development do
   gem 'selenium-webdriver', '2.35.1'

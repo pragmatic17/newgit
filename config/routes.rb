@@ -1,11 +1,24 @@
 ProtoSynth::Application.routes.draw do
+
+  
+  #get "users/new"
   root :to => 'login#login'
+
+  get "project_links/new"
+  match '/submissions',   to: 'project_links#submissions',       via: 'get'
   #get "login/login"
  # root :to => 'login'
   match '/login',               to: 'login#login',            via: 'get'
-  get "first_pages/home"
-  #match '/home',             to: 'first_pages#home',            via: 'get'
+  match '/login_check',         to: 'login#login_check',    via: 'post'
+
+  match '/new',         to: 'login#new',         via: 'get'
+  match '/create',      to: 'login#create',      via: 'post'
+
+  #get "first_pages/home"
+  match '/home',             to: 'first_pages#home',            via: 'get'
   get "first_pages/help"
+
+  resources :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
