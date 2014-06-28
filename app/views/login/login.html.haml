@@ -7,7 +7,7 @@
   = form_tag login_check_path do
     //= render 'shared/error_messages'
     //%p id="notice"
-    =flash[:notice]
+    = flash[:notice]
     = label :login, :username, 'Username'
     = text_field :login, :username
 
