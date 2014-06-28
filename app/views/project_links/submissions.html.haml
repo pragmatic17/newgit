@@ -1,0 +1,9 @@
+=provide(:title, 'Submissions')
+
+= javascript_include_tag :defaults
+%br
+%center
+	%h1 =@header_text
+	=link_to "Hot", {:action=> 'submissions', :order =>'hot'} 
+	=link_to "New", {:action=> 'submissions', :order =>'new'} 
+	=link_to 'Add new link', :action => 'new'

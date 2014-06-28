@@ -1,0 +1,1 @@
+user= User.new(username:"jack",first_name:"jack",last_name:"jack",password:"jack",password_confirmation:"jack")
