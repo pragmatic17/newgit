@@ -1,15 +1,27 @@
-<!DOCTYPE HTML>
+!!!
 %html
-  %head
-    %title= yield(:title)
-    = stylesheet_link_tag :application, :media => "all"
-    = javascript_include_tag :application
-    = csrf_meta_tags
+	%head
+		%title= yield(:title)
+		= stylesheet_link_tag :application, :media => "all"
+		= javascript_include_tag :application
+		= csrf_meta_tags
 
-    %body
-      / = render 'layouts/header'
-
-      %div{:id => "content"}
-        = yield
+		%body
+			%header.navbar.navbar-fixed-top.navbar-invers
+				%div.navbar-inner
+					%div.container
+						%center
+							%br
+							%h1 ProtoSynthesis
+							%nav
+								%ul.nav.pull-left
+									%li= link_to 'Home', home_path
+									%li= link_to 'About', about_path
+									%li= link_to 'Projects', projects_path
+									%li= link_to 'Recommended Links', recommended_links_path
+									/ %li= link_to 'Upload'
+			%br						
+			%div{:id => "content"}
+			= yield
 
 

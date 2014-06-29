@@ -17,6 +17,16 @@ ProtoSynth::Application.routes.draw do
   #get "first_pages/home"
   match '/home',             to: 'first_pages#home',            via: 'get'
   get "first_pages/help"
+  
+  match '/recommended_links',   to:'first_pages#recommended_links',   via: 'get'
+  match '/glove_mouse',   to:'first_pages#glove_mouse',   via: 'get'
+  match '/android_bot',   to:'first_pages#android_bot',   via: 'get'
+  match '/speakers',   to:'first_pages#speakers',   via: 'get'
+  match '/about',   to:'first_pages#about',   via: 'get'
+  match '/projects',   to:'first_pages#projects',   via: 'get'
+  # match '/reccomended_links'   to:'first_pages#home'   via: 'get'
+  # match '/reccomended_links'   to:'first_pages#home'   via: 'get'
+  # match '/reccomended_links'   to:'first_pages#home'   via: 'get'
 
   resources :users
   # The priority is based upon order of creation: first created -> highest priority.

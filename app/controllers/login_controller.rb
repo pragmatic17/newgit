@@ -12,13 +12,13 @@ class LoginController < ApplicationController
     if @potential_users.length != 1 # No user found
       flash[:notice] = "Username not found!"
       redirect_to login_path
-    elsif @potential_users[0].password == params[:login][:password] # Only one user found and it was the right password
+    elsif @potential_users[0].authenticate(params[:login][:password]) # Only one user found and it was the right password
       session[:login_id] = @potential_users[0].id
       @current_user = @potential_users[0]
-      flash[:notice] = "dub tee brah"
       redirect_to home_path
+      flash[:notice] = "dub tee brah"
     else # Password was wrong
-      flash[:notice] = "Wrong password!"
+      flash[:notice] = "wrong password"
       redirect_to login_path
     end
   end
@@ -47,7 +47,8 @@ class LoginController < ApplicationController
         redirect_to new_path # Redirect to make new account
       end
   end
- 
+  def user_params
+    params.require(:user).permit(:username, :first_name, :last_name, :password, :password_confirmation)
+  end
   
-
 end

@@ -1,0 +1,18 @@
+=provide(:title, 'Coke Can Speaker')
+
+
+%br
+%br
+	%div.sidebar-nav.navbar-inverse#left-links
+		%ul.nav-stacked.navbar-inner
+			%h4= link_to 'Kinect Glove Mouse', glove_mouse_path
+			%h4= link_to 'Recommended Links', recommended_links_path
+			%h4= link_to 'Android Controlled Robot', android_bot_path
+			%h4= link_to 'Coke Can Speaker', speakers_path
+%center
+	%h3 Coke Can Speaker
+	/@video_id = Zy_EhCOInMc 
+	%br
+	%iframe{:allowscriptaccess => "always", :allowFullScreen => "true", :frameborder => "0", :height => "430", :src => "http://www.youtube.com/embed/mfL_ZQ3mFj0", :title => "YouTube video player", :width => "640"}
+	/ iframe width="560" height="315" src="//www.youtube.com/embed/Zy_EhCOInMc" frameborder="0" allowfullscreen
+	/#{@video_id}
