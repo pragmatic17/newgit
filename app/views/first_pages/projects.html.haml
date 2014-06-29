@@ -2,12 +2,15 @@
 
 %br
 %br
-	%div.sidebar-nav.navbar-inverse
-		%ul.nav-stacked.navbar-inner
-			%h4= link_to 'Kinect Glove Mouse', glove_mouse_path
-			%h4= link_to 'Recommended Links', recommended_links_path
-			%h4= link_to 'Android Controlled Robot', android_bot_path
-			%h4= link_to 'Coke Can Speaker', speakers_path
-%center
-	%h3 Projects
-	
+	%div
+		%div.carousel.sidebar.slider.mini.navbar-inverse.fluid.facebook
+			%ul.nav-stacked.navbar-inner.sidebar.carousel.sidebar.slider.mini.navbar-inverse.fluid.facebook#left_links
+				%h4= link_to 'Kinect Glove Mouse', glove_mouse_path
+				%h4= link_to 'Recommended Links', recommended_links_path
+				%h4= link_to 'Android Controlled Robot', android_bot_path
+				%h4= link_to 'Coke Can Speaker', speakers_path
+			%div.container
+				%center
+					%h3 Projects
+				
+		

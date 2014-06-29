@@ -8,7 +8,7 @@ class FirstPagesController < ApplicationController
   def glove_mouse
   end
 
-  def reccomended_links
+  def recommended_links
   end
   def android_bot
   end
