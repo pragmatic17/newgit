@@ -10,6 +10,7 @@ ProtoSynth::Application.routes.draw do
  # root :to => 'login'
   match '/login',               to: 'login#login',            via: 'get'
   match '/login_check',         to: 'login#login_check',    via: 'post'
+  match '/logout',              to: 'login#logout',          via: 'get'
 
   match '/new',         to: 'login#new',         via: 'get'
   match '/create',      to: 'login#create',      via: 'post'

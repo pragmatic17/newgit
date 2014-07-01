@@ -1,11 +1,11 @@
 =provide(:title, 'Glove Mouse')
 
-%br
-%br
-%center
-  %h3 Glove Mouse
-  /@video_id = Zy_EhCOInMc 
-  %br
-  %iframe{:allowscriptaccess => "always", :allowFullScreen => "true", :frameborder => "0", :height => "430", :src => "http://www.youtube.com/embed/Zy_EhCOInMc", :title => "YouTube video player", :width => "640"}
-  / iframe width="560" height="315" src="//www.youtube.com/embed/Zy_EhCOInMc" frameborder="0" allowfullscreen
-  /#{@video_id}
+=render 'layouts/project_side_links'
+%div.container
+	%center
+		%h3 Glove Mouse
+		/@video_id = Zy_EhCOInMc 
+		%br
+		%iframe{:allowscriptaccess => "always", :allowFullScreen => "true", :frameborder => "0", :height => "430", :src => "http://www.youtube.com/embed/Zy_EhCOInMc", :title => "YouTube video player", :width => "640"}
+		/ iframe width="560" height="315" src="//www.youtube.com/embed/Zy_EhCOInMc" frameborder="0" allowfullscreen
+		/#{@video_id}
