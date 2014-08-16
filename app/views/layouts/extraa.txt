@@ -1,0 +1,7 @@
+	/ %header.navbar.navbar-default.navbar-inverse
+
+			/ 	%nav.navbar-tabs.navbar-stacked.navbar-inner
+			%div.bs-sidebar.affix
+	%ul.nav-stacked.navbar-inner
+
+	%ul.nav-stacked.navbar-inner

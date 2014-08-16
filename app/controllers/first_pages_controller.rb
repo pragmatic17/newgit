@@ -9,6 +9,7 @@ class FirstPagesController < ApplicationController
   end
 
   def recommended_links
+    
   end
   def android_bot
   end
