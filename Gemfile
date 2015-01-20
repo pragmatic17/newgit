@@ -14,6 +14,7 @@ gem 'haml'
 gem 'haml-rails'
 gem 'devise', '3.0.0.rc'
 gem 'protected_attributes'
+gem 'youtube_it', '~> 2.4.0'
 
 group :test, :development do
   gem 'selenium-webdriver', '2.35.1'

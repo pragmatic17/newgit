@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 			#session[:login_id] = @current_user.id
 			redirect_to home_path # Redirect to Newsfeed
 		else # An error was found
-			flash[:error]="errors in this bitch"
+			flash[:error]="errors in this page"
 			logger.info "errors in Create"
 			#flash[:error] = @new_user.errors.full_messages()[0] # Display error to user
 			redirect_to new_path # Redirect to make new account

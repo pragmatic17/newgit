@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140625023433) do
+ActiveRecord::Schema.define(version: 20150115033756) do
 
   create_table "links", force: true do |t|
     t.string   "url"
@@ -30,6 +30,17 @@ ActiveRecord::Schema.define(version: 20140625023433) do
     t.datetime "updated_at"
     t.string   "password_digest"
     t.string   "username"
+  end
+
+  create_table "videos", force: true do |t|
+    t.string   "link"
+    t.string   "title"
+    t.string   "author"
+    t.string   "duration"
+    t.integer  "likes"
+    t.integer  "dislikes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

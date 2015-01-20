@@ -1,0 +1,15 @@
+=provide(:title, 'New Video')
+
+=render 'layouts/project_side_links'
+%div.container
+	%center
+		%h3 New Video
+
+		= form_for @video do |f|
+			/ =render 'shared/errors', object: @video
+			%div{:class => "form-group"}
+				= f.label :link
+				= f.text_field :link, class: 'form-control', required: true
+				/%span{class => "help-block"} 
+				/	A link to the vid on youtube
+			= f.submit class: 'btn btn-default'
