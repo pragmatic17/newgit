@@ -2,7 +2,7 @@ class Video < ActiveRecord::Base
 
 	attr_accessible :link
 
-	YT_LINK_FORMAT = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/i
+	YT_LINK_FORMAT = /\A.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([\A#\&\?]*).*/i
 
 	validates :link, presence: true, format: YT_LINK_FORMAT
 
